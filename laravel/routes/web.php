@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Guest\PageController as GuestPageController;
+use App\Http\Controllers\Guest\ComicController as GuestComicController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/',[GuestPageController::class,'home'])->name('guest.home');
+Route::get('/comics',[GuestComicController::class,'index'])->name('guest.comics.index');
