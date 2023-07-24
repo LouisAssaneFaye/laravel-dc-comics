@@ -3,6 +3,6 @@
 
 @section('main-content')
 <h1>
-    homePage
+    guest comic list
 </h1>
 @endsection
