@@ -49,7 +49,7 @@ class comicController extends Controller
     {
         $comic = Comic::findOrFail($id);
         return view('admin.comics.show', compact('comic'));
-    }
+    } 
 
     /**
      * Show the form for editing the specified resource.
