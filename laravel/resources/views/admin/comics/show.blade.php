@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','admin comics list')
+@section('title','singole comic page')
 
 @section('main-content')
 <h1>
@@ -7,7 +7,7 @@
 </h1>
 
 <div>
-    @foreach($comicList as $comic)
+    
     <div>
         {{$comic->title}}
     </div>
@@ -35,10 +35,7 @@
     <div>
         {{$comic->writers}}
     </div>
-
-    <a href="{{route('admin.comics.show', $comic->id)}}">Link</a>
 </div>
-@endforeach
 
 
 @endsection
