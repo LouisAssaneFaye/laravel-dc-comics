@@ -21,5 +21,7 @@ Route::get('/',[GuestPageController::class,'home'])->name('guest.home');
 Route::get('/comics',[GuestComicController::class,'index'])->name('guest.comics.index');
 Route::resource('admin/comics', AdminComicController::class);
 Route::get('admin/comics/create', [AdminComicController::class, 'create'])->name('admin.comics.create');
+Route::get('admin/comics', [AdminComicController::class, 'store'])->name('admin.comics.store');
+
 Route::get('admin/comics/{id}',[AdminComicController::class, 'show'])->name('admin.comics.show');
 

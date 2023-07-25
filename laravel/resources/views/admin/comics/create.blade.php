@@ -8,7 +8,8 @@
 
 <div>
     
-<form class="col-12">
+<form class="col-8" action="{{route('admin.comics.store')}}" method="POST">
+    @csrf
   <div class="mb-3">
     <label for="title" class="form-label">
         Title
