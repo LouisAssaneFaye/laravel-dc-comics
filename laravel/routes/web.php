@@ -20,8 +20,9 @@ use App\Http\Controllers\Admin\ComicController as AdminComicController;
 Route::get('/',[GuestPageController::class,'home'])->name('guest.home');
 Route::get('/comics',[GuestComicController::class,'index'])->name('guest.comics.index');
 Route::resource('admin/comics', AdminComicController::class);
-Route::get('admin/comics/create', [AdminComicController::class, 'create'])->name('admin.comics.create');
-Route::get('admin/comics', [AdminComicController::class, 'store'])->name('admin.comics.store');
+Route::get('admin/comics/create', [AdminComicController::class, 'create'])->name('admin.create');
+Route::get('admin/comics', [AdminComicController::class, 'store'])->name('admin.store');
 
-Route::get('admin/comics/{id}',[AdminComicController::class, 'show'])->name('admin.comics.show');
-
+Route::get('admin/comics/{id}',[AdminComicController::class, 'show'])->name('admin.show');
+Route::get('admin/comics/{id}/edit',[AdminComicController::class, 'edit'])->name('admin.edit');
+Route::put('admin/comics/{id}',[AdminComicController::class, 'update'])->name('admin.update');
